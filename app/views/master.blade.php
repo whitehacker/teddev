@@ -15,7 +15,7 @@
 
   <body>
 
-    <nav class='navbar navbar-default'>
+    <nav class='navbar navbar-inverse'>
       <div class='navbar-inner nav-collapse' style="height: auto;">
         <!--
         <ul class="nav">
