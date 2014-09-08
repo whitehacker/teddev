@@ -53,14 +53,29 @@
               <li><a href="/contact"><i class="fa fa-envelope fa-fw"></i>تماس با ما</a></li>
               @endif
 
-              
+
             </ul>
         </div>
         <div class="col-md-9 well">
             @yield('content')
         </div>
     </div>
+
+   <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">© ۲۰۱۴- ریاست عمومی تربیه معلم - بخش سیستم های معلوماتی
+
+      </p>
+
+      <a href="/help" class="navbar-btn btn-danger btn pull-right">
+      <span class="fa fa-envelope"></span>  تماس با ما</a>
+    </div>
+
+
+  </div>
+
 </div>
+
 
 
 
