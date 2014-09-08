@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <tilte>{{ $title }}</title>
+
     {{ HTML::style('css/bootstrap-arabic.css') }}
     {{ HTML::style('css/font-awesome.css') }}
     {{ HTML::script('js/jquery.js') }}
@@ -29,7 +29,8 @@
           @if(Auth::user())
           <li>{{ HTML::link('logout', 'خروج') }}</li>
           @else
-            <li>{{ HTML::link('login', 'داخل شدن') }}</li>
+            <a href="/login" class="navbar-btn btn-success btn pull-right">
+            <span class="fa fa-lock"></span>  داخل شدن</a>
           @endif
         </ul>
 
