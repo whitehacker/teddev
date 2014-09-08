@@ -1,5 +1,5 @@
 @extends('master')
 
 @section('content')
-  <h2>این صفحه اصلی است</h2>
+  <h4>این صفحه اصلی است</h4>
 @endsection

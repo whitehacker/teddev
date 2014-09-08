@@ -7,7 +7,10 @@
     {{ HTML::style('css/font-awesome.css') }}
     {{ HTML::script('js/jquery.js') }}
     {{ HTML::script('js/bootstrap-arabic.js') }}
-
+    <style type="text/css">
+    body{margin-top:20px;}
+.fa-fw {width: 2em;}
+    </style>
   </head>
 
   <body>
@@ -33,11 +36,35 @@
       </div>
     </nav>
 
-      <div class="container">
 
-        @yield('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+              @if(Auth::user())
+              <li class="active"><a href="/"><i class="fa fa-home fa-fw"></i>صفحه اصلی</a></li>
+                <li><a href="/faculty_i"><i class="fa fa-user fa-fw"></i>فورم مصاحبه با استاد</a></li>
+                <li><a href="/faculty_o"><i class="fa fa-eye fa-fw"></i>فورم مشاهده استاد</a></li>
+                <li><a href="/student"><i class="fa fa-group fa-fw"></i>فورم مصاحبه با محصل</a></li>
+                <li><a href="/admin"><i class="fa fa-institution fa-fw"></i>فورم مصاحبه با کارمندان اداری</a></li>
+              @else
+              <li class="active"><a href="/"><i class="fa fa-home fa-fw"></i>صفحه اصلی</a></li>
+              <li><a href="/help"><i class="fa fa-question fa-fw"></i>رهنما</a></li>
+              <li><a href="/contact"><i class="fa fa-envelope fa-fw"></i>تماس با ما</a></li>
+              @endif
 
-      </div>
+              
+            </ul>
+        </div>
+        <div class="col-md-9 well">
+            @yield('content')
+        </div>
+    </div>
+</div>
+
+
+
+
 
 
 

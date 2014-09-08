@@ -17,3 +17,10 @@ Route::get('/', function()
 	return View::make('home.index')
 			->with('title', $title);
 });
+
+Route::get('/user', function()
+{
+	$text= "User Profile";
+	return View::make('users.profile')
+			->with('title', $text);
+});
