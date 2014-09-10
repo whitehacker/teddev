@@ -11,16 +11,42 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/', 'HomeController@get_index');
+Route::model('users', 'User');
+
+Route::get('login', 'UserController@get_index');
+
+Route::get('register', 'UserController@get_register');
+
+Route::post('login', 'UserController@post_index');
+Route::post('register', 'UserController@post_register');
+
+Route::get('profile', 'UserController@get_profile');
+Route::get('logout', 'UserController@logout');
+
+Route::get('/help', function()
 {
-	$title= "صفحه اصلی";
-	return View::make('home.index')
+	$title= "رهنما";
+	return View::make('home.help')
 			->with('title', $title);
 });
 
-Route::get('/user', function()
+Route::get('/contact', function()
 {
-	$text= "User Profile";
-	return View::make('users.profile')
-			->with('title', $text);
+	$title= "تماس با ما";
+	return View::make('home.contact')
+			->with('title', $title);
+});
+
+
+
+HTML::macro('clever_link', function($route, $text) {
+	if( Request::path() == $route ) {
+		$active = "class = 'active'";
+	}
+	else {
+		$active = '';
+	}
+
+  return '<li ' . $active . '>' . link_to($route, $text) . '</li>';
 });

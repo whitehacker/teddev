@@ -1,7 +1,7 @@
 <?php
 
 class HomeController extends BaseController {
-
+	public $restful = true;
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
@@ -15,9 +15,11 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function get_index()
 	{
-		return View::make('hello');
+		$title= "صفحه اصلی";
+		return View::make('home.index')
+				->with('title', $title);
 	}
 
 }

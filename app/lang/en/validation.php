@@ -85,8 +85,14 @@ return array(
 	*/
 
 	'custom' => array(
-		'attribute-name' => array(
-			'rule-name' => 'custom-message',
+		'username' => array(
+			'required' => 'قیمت را درین فیلد وارد سازید!',
+		),
+		'password' => array(
+			'required' => 'پاسورد درست خویش را وارد سازید!',
+		),
+		'email' => array(
+			'required' => 'شما باید ایمیل آدرس درست تان را وارد سازید',
 		),
 	),
 

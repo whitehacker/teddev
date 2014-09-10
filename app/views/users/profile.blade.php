@@ -1,5 +1,6 @@
 @extends('master')
 
-@section('sidebar')
-  <h2>Users Profile</h2>
+@section('content')
+  <h3>Welcome to your profile Page {{ ucwords(Auth:user()->username) }}
+
 @endsection
